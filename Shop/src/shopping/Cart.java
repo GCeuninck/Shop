@@ -48,8 +48,8 @@ public class Cart {
 		int total = 0;
 		
 		for (CartItem item : this.cart) {
-				total += item.price();
-			}
+			total += item.price();
+		}
 		return total;
 	}
 	
@@ -57,10 +57,24 @@ public class Cart {
 	@Override
 	public String toString() {
 		
-		return String.format("----------------------------------------------------------------\n" +
-                "----------------------------------------------------------------\n" +
-                "                  TOTAL:\t    %.2fe", this.total());
+		String res = new String();
 		
+		res += "----------------------------------------------------------------\n";
+		
+		for (CartItem item : this.cart) {
+			res += item.toString();
+		}
+		
+		res += "----------------------------------------------------------------\n";
+		res += "                  TOTAL:\t   ";
+		
+		int total = this.total();
+		int euros = total/100;
+		int centimes = total - euros * 100;
+		
+		res += String.format("%2d", euros) + "." + String.format("%02d", centimes) + "e";
+		
+		return res;
 	}
 	
 	public static void main(String[] args) {

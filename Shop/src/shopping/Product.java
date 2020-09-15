@@ -18,10 +18,4 @@ public class Product {
 	public String description() {
 		return this.description;
 	}
-	
-	/*
-	// factory method (méthode de classe)
-	public static Product newProduct(int unitPrice, String description) {
-		return new Product(unitPrice, description);
-	}*/
 }

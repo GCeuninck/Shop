@@ -22,12 +22,6 @@ public abstract class CartItem {
 		return this.getProduct().unitPrice;
 	}
 	
-	/*
-	@Override
-	public String toString() {
-		return String.format("%s", this);
-	}*/
-	
 	boolean decreaseQty(int q) {
 		if (this.quantity-q > 0) {
 			this.quantity -= q;
@@ -40,4 +34,7 @@ public abstract class CartItem {
 	}
 	
 	abstract int price();
+	
+	@Override
+	abstract public String toString();
 }
