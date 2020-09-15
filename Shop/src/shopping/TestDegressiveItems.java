@@ -1,4 +1,4 @@
-package Tests;
+package shopping;
 
 import org.junit.Before;
 import org.junit.Test;

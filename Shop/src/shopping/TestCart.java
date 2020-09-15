@@ -1,4 +1,4 @@
-package Tests;
+package shopping;
 
 import java.util.Arrays;
 

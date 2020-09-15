@@ -1,3 +1,4 @@
+package shopping;
 
 public class Product {
 	
@@ -5,9 +6,17 @@ public class Product {
 	String description;
 	
 	// constructeur canonique
-	Product(int unitPrice, String description) {
-		this.unitPrice = unitPrice;
+	Product(String description, int unitPrice) {
 		this.description = description;
+		this.unitPrice = unitPrice;
+	}
+	
+	public int unitPrice() {
+		return this.unitPrice;
+	}
+	
+	public String description() {
+		return this.description;
 	}
 	
 	/*
@@ -15,9 +24,4 @@ public class Product {
 	public static Product newProduct(int unitPrice, String description) {
 		return new Product(unitPrice, description);
 	}*/
-	
-	public static void main(String[] args) {
-		
-		System.out.println("");
-	}
 }
