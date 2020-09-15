@@ -21,28 +21,50 @@ public class Cart {
 		this.cart.remove(item);
 	}
 	
-	@SuppressWarnings("unlikely-arg-type")
-	public int quantityProduct(Product p) {
-		return this.cart.get(this.cart.indexOf(p)).getQuantity();
+	public int quantity(Product p) {
+		
+		int total = 0;
+		
+		for (CartItem item : this.cart) {
+			if (item.getProduct().equals(p)) {
+				total += item.getQuantity();
+			}
+		}
+		return total;
 	}
 	
 	public List<CartItem> priceGreater(int amount){
 		
-		return this.cart;
+		List<CartItem> res = new ArrayList<>();
+		for (CartItem item : this.cart) {
+			if (item.price() > amount) {
+				res.add(item);
+			}
+		}
+		return res;
 	}
 	
 	public int total() {
-		return 0;
+		int total = 0;
+		
+		for (CartItem item : this.cart) {
+				total += item.price();
+			}
+		return total;
 	}
 	
-	/*
+	
 	@Override
 	public String toString() {
-		return String.format("%s", this);
-	}*/
+		
+		return String.format("----------------------------------------------------------------\n" +
+                "----------------------------------------------------------------\n" +
+                "                  TOTAL:\t    %.2fe", this.total());
+		
+	}
 	
 	public static void main(String[] args) {
 		
-		System.out.println("");
+		Cart cart = new Cart();
 	}
 }
