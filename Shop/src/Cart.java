@@ -6,7 +6,6 @@ public class Cart {
 		
 	}
 
-
 	public void clear() {
 		
 	}
