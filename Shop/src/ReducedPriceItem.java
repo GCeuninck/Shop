@@ -1,4 +1,4 @@
 
-public class ReducedPriceItem {
+public class ReducedPriceItem extends CartItem {
 
 }

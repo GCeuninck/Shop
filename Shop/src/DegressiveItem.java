@@ -1,4 +1,4 @@
 
-public class DegressiveItem {
+public class DegressiveItem extends CartItem {
 
 }

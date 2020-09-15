@@ -1,4 +1,4 @@
 
-public class RegularItem {
+public class RegularItem extends CartItem {
 
 }

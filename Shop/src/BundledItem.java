@@ -1,4 +1,4 @@
 
-public class BundledItem {
+public class BundledItem extends CartItem {
 
 }

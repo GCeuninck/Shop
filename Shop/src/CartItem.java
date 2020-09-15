@@ -1,4 +1,4 @@
 
-public interface CartItem {
+public abstract class CartItem {
 
 }
