@@ -7,25 +7,25 @@ public class Cart {
 	}
 
 
-	protected void clear() {
+	public void clear() {
 		
 	}
 	
-	protected void add(CartItem item) {
+	public void add(CartItem item) {
 		
 	}
 	
-	protected void remove(CartItem item) {
+	public void remove(CartItem item) {
 		
 	}
 	
-	protected int quantityProduct(Product p) {
+	public int quantityProduct(Product p) {
 		int res = 0; 
 		return res;
 	}
 	
-	protected List<CartItem> priceGreaterThan(int amount){
-		final List<CartItem> res = new ArrayList<>();
+	public List<CartItem> priceGreaterThan(int amount){
+		List<CartItem> res = new ArrayList<>();
 		return res;
 	}
 	
